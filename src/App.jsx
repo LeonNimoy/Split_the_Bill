@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
-import ClientCalculator from './components/client_calculator'
+import ClientCalculator from './components/client_calculator';
+
 function App() {
   return (
     <div>
-    <ClientCalculator/>
+      <ClientCalculator />
     </div>
-    );
+  );
 }
 
 export default App;
