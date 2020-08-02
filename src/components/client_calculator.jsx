@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { CalculatorContainer, Title } from './client_calculator.style';
+
 function ClientCalculator() {
   return (
-    <div>
-      <p>Hello World</p>
-    </div>
+    <CalculatorContainer>
+      <Title>Split The Bill</Title>
+    </CalculatorContainer>
   );
 }
 
