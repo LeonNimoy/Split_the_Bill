@@ -12,12 +12,24 @@ height: 525px;
 `;
 export const Title = styled.p `
 background:#242323;
-    color: white;
-    margin: 0;
-    padding: 10px 100px;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: normal;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+color: white;
+margin: 0;
+padding: 10px 100px;
+text-transform: uppercase;
+font-size: 18px;
+font-weight: normal;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+`;
+export const Text = styled.p `
+padding-left: 20px;
+`;
+export const UserInput = styled.input `
+font-size: 14px;
+/*color: #2980b9;*/
+color: red;
+background-color: #f7f7f7;
+width: 60%;
+padding: 5px 5px 8px 8px;
+margin-left: 5px;
 `;
