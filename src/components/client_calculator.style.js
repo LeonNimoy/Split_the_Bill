@@ -11,7 +11,7 @@ export const CalculatorContainer = styled.div`
   -moz-border-radius: ;
 `;
 export const Title = styled.p`
-  background: #242323;
+  background: rgb(36, 35, 35);
   color: white;
   margin: 0;
   padding: 10px 100px;
@@ -26,9 +26,8 @@ export const Text = styled.p`
 `;
 export const UserInput = styled.input`
   font-size: 14px;
-  /*color: #2980b9;*/
-  color: red;
-  background-color: #f7f7f7;
+  color: rgb(255, 0, 0);
+  background-color: rgb(247, 247, 247);
   width: 60%;
   padding: 5px 5px 8px 8px;
   margin-left: 5px;
@@ -37,4 +36,19 @@ export const PercentageContainer = styled.select`
   padding: 13px 13px 20px 20px;
   margin-left: 35px;
   font-size: 16px;
+`;
+export const CalculateButton = styled.button`
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+  margin: 20px auto;
+  background: rgb(245, 160, 90);
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  font-size: 17px;
+  color: rgb(255, 255, 255);
+  :hover {
+    background: rgb(76, 40, 39);
+  }
 `;

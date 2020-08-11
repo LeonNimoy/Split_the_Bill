@@ -6,6 +6,7 @@ import {
   Text,
   UserInput,
   PercentageContainer,
+  CalculateButton,
 } from './client_calculator.style';
 
 function ClientCalculator() {
@@ -29,6 +30,12 @@ function ClientCalculator() {
           <option value="0.1">10&#37;</option>
           <option value="0.05">5&#37;</option>
         </PercentageContainer>
+        <Text>How many people are sharing the bill?</Text>
+        <Text>
+          <UserInput placeholder="Bill Amount" />
+          people
+        </Text>
+        <CalculateButton type="button">Calculate!</CalculateButton>
       </CalculatorContainer>
     </div>
   );
