@@ -5,18 +5,32 @@ import {
   Title,
   Text,
   UserInput,
+  PercentageContainer,
 } from './client_calculator.style';
 
 function ClientCalculator() {
   return (
-    <CalculatorContainer>
-      <Title>Split The Bill</Title>
-      <Text>How much is the bill?</Text>
-      <Text>
-        $
-        <UserInput placeholder="Bill Amount" />
-      </Text>
-    </CalculatorContainer>
+    <div>
+      <CalculatorContainer>
+        <Title>Split The Bill</Title>
+        <Text>How much is the bill?</Text>
+        <Text>
+          $
+          <UserInput placeholder="Bill Amount" />
+        </Text>
+        <Text>How much is the bill?</Text>
+        <PercentageContainer>
+          <option disabled selected value="0">
+            -- Choose an % --
+          </option>
+          <option value="0.3">30&#37;</option>
+          <option value="0.2">20&#37;</option>
+          <option value="0.15">15&#37;</option>
+          <option value="0.1">10&#37;</option>
+          <option value="0.05">5&#37;</option>
+        </PercentageContainer>
+      </CalculatorContainer>
+    </div>
   );
 }
 
