@@ -52,9 +52,20 @@ import {
 // };
 
 function ClientCalculator() {
+  const schema = yup.object().shape({
+    bill: yup.number().required(),
+    percentage: yup.string().required(),
+    people: yup.number().required(),
+  });
+
+  const { register, handleSubmit, errors } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmit = data => console.log(data);
   return (
     <div>
-      <CalculatorContainer>
+      <CalculatorContainer onSubmit={handleSubmit(onSubmit)}>
         <Title>Split The Bill</Title>
         <Text>How much is the bill?</Text>
         <Text>
@@ -77,7 +88,9 @@ function ClientCalculator() {
           <UserInput placeholder="Bill Amount" />
           people
         </Text>
-        <CalculateButton type="button">Calculate!</CalculateButton>
+        <CalculateButton type="submit" onSubmit={onSubmit}>
+          Calculate!
+        </CalculateButton>
       </CalculatorContainer>
     </div>
   );
