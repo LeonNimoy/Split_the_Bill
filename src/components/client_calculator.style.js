@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Form, Button } from 'react-bootstrap';
 
-export const CalculatorContainer = styled.div`
+export const CalculatorContainer = styled(Form)`
   height: 525px;
   width: 360px;
   margin: 100px auto;
@@ -24,9 +25,18 @@ export const Title = styled.p`
 export const Text = styled.p`
   padding-left: 20px;
 `;
-export const UserInput = styled.input`
-  font-size: 14px;
+export const FormGroup = styled(Form.Group)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
   color: rgb(255, 0, 0);
+`;
+
+export const UserInput = styled(Form.Control)`
+  font-size: 14px;
+  color: rgb(0, 0, 0);
   background-color: rgb(247, 247, 247);
   width: 60%;
   padding: 5px 5px 8px 8px;
@@ -37,7 +47,7 @@ export const PercentageContainer = styled.select`
   margin-left: 35px;
   font-size: 16px;
 `;
-export const CalculateButton = styled.button`
+export const CalculateButton = styled(Button)`
   text-transform: uppercase;
   font-weight: bold;
   display: block;
