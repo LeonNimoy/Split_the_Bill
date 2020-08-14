@@ -2,14 +2,18 @@ import styled from 'styled-components';
 import { Form, Button } from 'react-bootstrap';
 
 export const CalculatorContainer = styled(Form)`
-  height: 525px;
-  width: 360px;
+  display: block;
+  width: 75%;
+  text-align: center;
   margin: 100px auto;
   background: rgb(247, 247, 247);
-  box-shadow: 0 0 3px rgb(2, 0, 36, 1) 0%;
+  box-shadow: 0 0 3px rgba(2, 0, 36, 1);
   border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: ;
+  padding-bottom: 10px;
+  @media screen and (min-width: 768px) {
+    height: 525px;
+    width: 360px;
+  }
 `;
 export const Title = styled.p`
   background: rgb(36, 35, 35);
@@ -57,6 +61,7 @@ export const CalculateButton = styled(Button)`
   width: 200px;
   height: 50px;
   font-size: 17px;
+  margin-bottom: 20px;
   color: rgb(255, 255, 255);
   :hover {
     background: rgb(76, 40, 39);

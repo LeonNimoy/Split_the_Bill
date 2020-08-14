@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers';
 import * as yup from 'yup';
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 import {
   CalculatorContainer,
@@ -10,13 +10,13 @@ import {
   Text,
   FormGroup,
   UserInput,
-  PercentageContainer,
   CalculateButton,
 } from './client_calculator.style';
 
 function ClientCalculator() {
   const schema = yup.object().shape({
     bill: yup.number().required(),
+    percentage: yup.number(),
     people: yup.number().required(),
   });
 
@@ -24,7 +24,12 @@ function ClientCalculator() {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = data => console.log(data);
+  const onSubmit = InputResult => {
+    const CalculationResult =
+      (InputResult.bill * (InputResult.percentage / 100) + InputResult.bill) /
+      InputResult.people;
+    toast(`💵  ${CalculationResult} per person`);
+  };
 
   return (
     <div>
@@ -42,14 +47,13 @@ function ClientCalculator() {
         </FormGroup>
         <Text>How much is the bill?</Text>
         <FormGroup>
-          <PercentageContainer>
-            <option defaultValue="0">-- Choose an % --</option>
-            <option value="0.3">30&#37;</option>
-            <option value="0.2">20&#37;</option>
-            <option value="0.15">15&#37;</option>
-            <option value="0.1">10&#37;</option>
-            <option value="0.05">5&#37;</option>
-          </PercentageContainer>
+          <UserInput
+            name="percentage"
+            type="text"
+            placeholder="% of the waiter"
+            ref={register}
+          />
+          {errors.people && 'No tips for the waiter?'}
         </FormGroup>
         <Text>How many people are sharing the bill?</Text>
         <FormGroup>
