@@ -11,9 +11,9 @@ import {
   FormGroup,
   UserInput,
   CalculateButton,
-} from './client_calculator.style';
+} from './CustomerCalculator.style';
 
-function ClientCalculator() {
+function CustomerCalculator() {
   const schema = yup.object().shape({
     bill: yup.number().required(),
     percentage: yup.number(),
@@ -73,4 +73,4 @@ function ClientCalculator() {
   );
 }
 
-export default ClientCalculator;
+export default CustomerCalculator;
