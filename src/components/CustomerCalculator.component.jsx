@@ -28,7 +28,7 @@ function CustomerCalculator() {
     const CalculationResult =
       (InputResult.bill * (InputResult.percentage / 100) + InputResult.bill) /
       InputResult.people;
-    toast(`💵  ${CalculationResult} per person`);
+    toast(`💵  ${CalculationResult} por pessoa`);
   };
 
   return (
@@ -66,7 +66,7 @@ function CustomerCalculator() {
           {errors.people && 'Quantas pessoas?'}
         </FormGroup>
         <CalculateButton type="submit" onSubmit={onSubmit}>
-          Calculate!
+          Calcular!
         </CalculateButton>
       </CalculatorContainer>
     </div>
