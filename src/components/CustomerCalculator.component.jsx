@@ -50,10 +50,10 @@ function CustomerCalculator() {
           <UserInput
             name="percentage"
             type="text"
-            placeholder="% do garçom"
+            placeholder="% do garçon"
             ref={register}
           />
-          {errors.people && 'Nenhuma gorjeta para o graçom?'}
+          {errors.people && 'Nenhuma gorjeta para o garçon?'}
         </FormGroup>
         <Text>Quantas pessoas estão dividindo a conta?</Text>
         <FormGroup>
