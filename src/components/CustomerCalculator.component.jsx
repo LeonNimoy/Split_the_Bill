@@ -11,9 +11,9 @@ import {
   FormGroup,
   UserInput,
   CalculateButton,
-} from './client_calculator.style';
+} from './CustomerCalculator.style';
 
-function ClientCalculator() {
+function CustomerCalculator() {
   const schema = yup.object().shape({
     bill: yup.number().required(),
     percentage: yup.number(),
@@ -34,36 +34,36 @@ function ClientCalculator() {
   return (
     <div>
       <CalculatorContainer onSubmit={handleSubmit(onSubmit)}>
-        <Title>Split The Bill</Title>
-        <Text>How much is the bill?</Text>
+        <Title>Divida a conta</Title>
+        <Text>Qual o valor da conta?</Text>
         <FormGroup>
           <UserInput
             name="bill"
             type="text"
             ref={register}
-            placeholder="Bill Amount"
+            placeholder="Valor da conta"
           />
-          {errors.bill && 'Please, inform the total of your bill'}
+          {errors.bill && 'Por favor, informe o valor da conta'}
         </FormGroup>
-        <Text>How much is the bill?</Text>
+        <Text>Qual o valor da gorjeta?</Text>
         <FormGroup>
           <UserInput
             name="percentage"
             type="text"
-            placeholder="% of the waiter"
+            placeholder="% do garçom"
             ref={register}
           />
-          {errors.people && 'No tips for the waiter?'}
+          {errors.people && 'Nenhuma gorjeta para o graçom?'}
         </FormGroup>
-        <Text>How many people are sharing the bill?</Text>
+        <Text>Quantas pessoas estão dividindo a conta?</Text>
         <FormGroup>
           <UserInput
             name="people"
             type="text"
             ref={register}
-            placeholder="Bill Amount"
+            placeholder="Quantidade de pessoas"
           />
-          {errors.people && 'How many people?'}
+          {errors.people && 'Quantas pessoas?'}
         </FormGroup>
         <CalculateButton type="submit" onSubmit={onSubmit}>
           Calculate!
@@ -73,4 +73,4 @@ function ClientCalculator() {
   );
 }
 
-export default ClientCalculator;
+export default CustomerCalculator;

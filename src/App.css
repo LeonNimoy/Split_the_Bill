@@ -7,3 +7,10 @@ body {
     background: linear-gradient(to left,#3da842, #d3ebf0);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
+
+  #tsparticles  {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
