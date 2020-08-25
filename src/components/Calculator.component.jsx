@@ -11,7 +11,7 @@ import {
   FormGroup,
   UserInput,
   CalculateButton,
-} from './CustomerCalculator.style';
+} from './Calculator.style';
 
 function CustomerCalculator() {
   const schema = yup.object().shape({
