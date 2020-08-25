@@ -24,11 +24,11 @@ function CustomerCalculator() {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = InputResult => {
-    const CalculationResult =
-      (InputResult.bill * (InputResult.percentage / 100) + InputResult.bill) /
-      InputResult.people;
-    toast(`💵  ${CalculationResult} por pessoa`);
+  const onSubmit = (data, e) => {
+    const result =
+      (data.bill * (data.percentage / 100) + data.bill) / data.people;
+    toast(`💵  ${result} por pessoa`);
+    e.target.reset();
   };
 
   return (
