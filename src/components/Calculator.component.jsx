@@ -55,7 +55,7 @@ function CustomerCalculator() {
           />
           {errors.people && 'Nenhuma gorjeta para o garçon?'}
         </FormGroup>
-        <Text>Quantas pessoas estão dividindo a conta?</Text>
+        <Text>Quantas pessoas?</Text>
         <FormGroup>
           <UserInput
             name="people"

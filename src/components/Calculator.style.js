@@ -5,20 +5,21 @@ export const CalculatorContainer = styled(Form)`
   display: block;
   width: 75%;
   text-align: center;
-  margin: 100px auto;
-  background: rgb(247, 247, 247);
+  margin: 10px auto;
+
   box-shadow: 0 0 3px rgba(2, 0, 36, 1);
   border-radius: 20px;
   padding-bottom: 10px;
   @media screen and (min-width: 768px) {
-    height: 525px;
+    height: 400px;
     width: 360px;
+    padding-bottom: 0;
   }
 `;
 export const Title = styled.p`
   background: rgb(36, 35, 35);
   color: white;
-  margin: 0;
+  margin-bottom: 20px;
   padding: 10px 100px;
   text-transform: uppercase;
   font-size: 18px;
@@ -43,6 +44,7 @@ export const UserInput = styled(Form.Control)`
   color: rgb(0, 0, 0);
   background-color: rgb(247, 247, 247);
   width: 60%;
+  text-align: center;
   padding: 5px 5px 8px 8px;
   margin-left: 5px;
 `;
