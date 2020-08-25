@@ -5,8 +5,7 @@ export const CalculatorContainer = styled(Form)`
   display: block;
   width: 75%;
   text-align: center;
-  margin: 10px auto;
-
+  margin: 100px auto;
   box-shadow: 0 0 3px rgba(2, 0, 36, 1);
   border-radius: 20px;
   padding-bottom: 10px;
